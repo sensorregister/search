@@ -1,46 +1,47 @@
 package nl.kadaster.sensor.search.register;
 
-import java.util.List;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.google.common.base.MoreObjects;
 
+import java.util.List;
+
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Identity {
+public class Sensor {
 
-    private String id;
-    private String telephoneNumber;
-    private List<Code> codes;
+    private String name;
+    private String description;
+    private Code code;
 
-    public String getId() {
-        return id;
+    public String getName() {
+        return name;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getTelephoneNumber() {
-        return telephoneNumber;
+    public String getDescription() {
+        return description;
     }
 
-    public void setTelephoneNumber(String telephoneNumber) {
-        this.telephoneNumber = telephoneNumber;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public List<Code> getCodes() {
-        return codes;
+    public Code getCode() {
+        return code;
     }
 
-    public void setCodes(List<Code> codes) {
-        this.codes = codes;
+    public void setCode(Code code) {
+        this.code = code;
     }
 
     @Override
     public String toString() {
         return MoreObjects.toStringHelper(this)
-                .add("id", id)
-                .add("telephoneNumber", telephoneNumber)
-                .add("codes", codes)
+                .add("name", name)
+                .add("description", description)
+                .add("code", code)
                 .toString();
     }
 

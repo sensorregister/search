@@ -9,7 +9,6 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/info").setViewName("sensor-info");
     }
 
 }

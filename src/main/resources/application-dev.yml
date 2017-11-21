@@ -1,0 +1,16 @@
+---
+
+logging:
+   level:
+      nl.kadaster.sensor: DEBUG
+      org.springframework: INFO
+
+spring:
+  devtools:
+    livereload:
+      enabled: true
+    restart:
+      exclude: static/**,templates/**
+
+server:
+  port: 8082
