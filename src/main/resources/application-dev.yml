@@ -13,4 +13,4 @@ spring:
       exclude: static/**,templates/**
 
 server:
-  port: 8082
+  port: 8083
