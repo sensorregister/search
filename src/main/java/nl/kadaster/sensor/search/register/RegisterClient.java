@@ -10,6 +10,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface RegisterClient {
 
 //    @RequestLine("GET /sensors/search/findOneByCode_ValueAndCode_StatusIs?value={value}")
-    @RequestMapping(method = RequestMethod.GET, value = "/sensors/search/findOneByCode_ValueAndCode_StatusIs")
+    @RequestMapping(method = RequestMethod.GET, value = "/sensors/search/findOneByCode_ValueAndCode_StatusIs?projection=withCode")
     Sensor getSensor(@RequestParam("value") String codeValue, @RequestParam("status") String Status);
 }
