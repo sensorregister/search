@@ -30,7 +30,7 @@ public class InfoController {
 
         if (code != null && !code.isEmpty()) {
             logger.debug(String.format("Finding info for %s", code));
-            sensor = registerClient.getSensor(code, SENSOR_ACTIVATED);
+            sensor = registerClient.getSensor(code);
             logger.debug(String.format("Found: %s", sensor));
         }
 
